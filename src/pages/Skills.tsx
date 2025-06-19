@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaCss3Alt, FaGithub, FaHtml5, FaReact } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
@@ -36,7 +36,7 @@ const Skills = () => {
 
       {/* {!skill ? <Title} */}
 
-      {/* {!skill ? (
+      {!skill ? (
         <section className="text-4xl gap-8 grid lg:grid-cols-4">
           <div className="flex  flex-col items-center gap-2">
             Html <FaHtml5 className="text-orange-500" />
@@ -66,7 +66,7 @@ const Skills = () => {
         </section>
       ) : (
         <p>Fashion Loading....</p>
-      )} */}
+      )}
     </div>
   );
 };
