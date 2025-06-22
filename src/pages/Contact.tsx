@@ -1,4 +1,3 @@
-import { div, h1, h2 } from "framer-motion/client";
 import { useState } from "react";
 
 const Contact = () => {
