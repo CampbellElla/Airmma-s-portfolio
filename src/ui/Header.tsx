@@ -33,7 +33,7 @@ const Header = () => {
         <div
           className={`${
             !nav
-              ? "hidden"
+              ? "hidden lg:flex"
               : "absolute right-1 left-1 top-4 rounded-md bg-gray-500 p-3 w-[90%] mx-auto"
           } flex lg:flex-row flex-col items-center gap-5 mt-10 lg:mt-0 text-white`}
         >

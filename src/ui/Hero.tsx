@@ -17,7 +17,12 @@ const Hero = () => {
           Emmanuella Campbell
         </h2>
         <p className="lg:text-5xl text-3xl text-gray-600 mt-4 mb-8">
-          <span className="text-yellow-500 lg:text-6xl text-4xl">~</span>
+          <Link
+            to="Skills"
+            className="text-yellow-500 lg:text-6xl text-4xl cursor-pointer"
+          >
+            ~
+          </Link>
           Frontend Developer
         </p>
         <motion.div
