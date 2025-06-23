@@ -18,7 +18,7 @@ const Skills = () => {
       <div className="flex justify-center items-center mb-8 gap-4">
         <button
           onClick={() => setActiveCategory("Frontend")}
-          className={`px-4 py-2 rounded-md ${
+          className={`px-4 py-2 rounded-full ${
             activeCategory === "Frontend"
               ? "bg-sky-700 text-white"
               : "bg-gray-700 text-gray-300"
@@ -29,7 +29,7 @@ const Skills = () => {
 
         <button
           onClick={() => setActiveCategory("Tools")}
-          className={`px-4 py-2 rounded-md ${
+          className={`px-4 py-2 rounded-full ${
             activeCategory === "Tools"
               ? "bg-purple-600 text-black"
               : "bg-gray-700 text-gray-300"
@@ -39,7 +39,7 @@ const Skills = () => {
         </button>
       </div>
 
-      <div className="flex justify-center items-center rounded-md mx-auto mb-20">
+      <div className="flex justify-center items-center rounded-md mx-auto mb-20 hover:scale-105 transition-transform duration-300">
         {activeCategory === "Frontend" && (
           <section className="text-4xl gap-6 grid lg:grid-cols-3 p-6 rounded-1g shadow-xl cursor-pointer">
             <div className="flex  flex-col items-center gap-2">
@@ -87,7 +87,7 @@ const Skills = () => {
           </section>
         )}
         {activeCategory === "Tools" && (
-          <div className="gap-8 p-8 rounded-1g shadow-xl text-4xl flex lg:flex-row flex-col">
+          <div className="gap-8 p-8 rounded-1g shadow-xl text-4xl flex lg:flex-row flex-col cursor-pointer">
             <div className="flex  flex-col items-center gap-2">
               <FaGithub className="text-white with shadow-[0_0_15px_#60a5fa]" />
               Github
