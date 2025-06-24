@@ -15,9 +15,12 @@ const About = () => {
         <p className="lg:text-1g text-xl mb-4 ">
           Hey! I'm{" "}
           <span className="font-semibold text-yellow-300">Emmanuella</span>, a
-          passionate front-end developer who loves turning ideas into real,
-          interactive experiences.I enjoy building things that look good and
-          feel good to use.
+          passionate Front-end Developer who genuinely loves turning cool ideas
+          into delightful, interactive and digital experiences. My focus is on
+          building interfaces that are not just visually engaging but also
+          incredibly intuitive to use. I'm always eager to explore new tech,
+          create impactful projects, and bring a positive, collaborative energy
+          to every challenge.
         </p>
         <p className="text-1g text-xl mb-4">
           I'm a girl on a journey to explore, grow, and create fun and
@@ -25,13 +28,13 @@ const About = () => {
           designing, coding, or brainstorming, I'm all in.🚀
         </p>
         <p className="mb-4 text-xl text-yellow-400 italic">
-          Every moment is a fresh beginning.
+          Every moment is a fresh beginning like they say (My favourite quote)
         </p>
 
         <p className="text-xl text-gray-400 mt-4">
-          I love to code, vibe to music, and have meaningful conversations.
-          React is my favorite stack, it's simple, powerful, and just... makes
-          sense.😌💻
+          I love to code, vibe to music, and have meaningful conversations, and
+          My go-to framework? Definitely React....(its logic and power I enjoy
+          building things that look good and feel good to use.)😌💻
         </p>
       </motion.div>
 

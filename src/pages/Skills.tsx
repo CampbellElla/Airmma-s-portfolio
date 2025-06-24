@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { FaCss3Alt, FaGithub, FaHtml5, FaReact } from "react-icons/fa";
 import {
   SiJavascript,
@@ -9,6 +9,49 @@ import {
 import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
+  const skills: {
+    icon: ReactNode;
+    title: string;
+    progress: string;
+    color: string;
+  }[] = [
+    {
+      icon: <FaHtml5 />,
+      title: "HTML",
+      progress: "70%",
+      color: "orange-500",
+    },
+    {
+      icon: <FaCss3Alt />,
+      title: "CSS",
+      progress: "60%",
+      color: "blue-400",
+    },
+    {
+      icon: <SiJavascript />,
+      title: "JavaScript",
+      progress: "70%",
+      color: "yellow-600",
+    },
+    {
+      icon: <SiTypescript />,
+      title: "TypeScript",
+      progress: "30%",
+      color: "blue-400",
+    },
+    {
+      icon: <FaReact />,
+      title: "React",
+      progress: "40%",
+      color: "cyan-400",
+    },
+    {
+      icon: <SiTailwindcss />,
+      title: "Tailwind",
+      progress: "30%",
+      color: "orange-500",
+    },
+  ];
   const [activeCategory, setActiveCategory] = useState("Frontend");
   return (
     <div className="min-h-screen bg-black text-white px-10 py-20">
@@ -39,65 +82,37 @@ const Skills = () => {
         </button>
       </div>
 
-      <div className="flex justify-center items-center rounded-md mx-auto mb-20 hover:scale-105 transition-transform duration-300">
+      <div className="flex justify-center items-center rounded-md mx-auto mb-20 ">
         {activeCategory === "Frontend" && (
           <section className="text-4xl gap-6 grid lg:grid-cols-3 p-6 rounded-1g shadow-xl cursor-pointer">
-            <div className="flex  flex-col items-center gap-2">
-              <FaHtml5 className="text-orange-500" />
-              Html
-              <div className="w-[60%] bg-gray-500 h-2 rounded-full oveflow-hidden">
-                <div className="bg-orange-500 h-full rounded-full w-[70%]"></div>
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="flex  flex-col items-center gap-2 hover:scale-105 transition-transform duration-300"
+              >
+                <div className={`text-${skill.color}`}>{skill.icon}</div>
+                {skill.title}
+                <div className="w-[100%] bg-gray-500 h-2 rounded-full gap-8 overflow-hidden">
+                  <div
+                    className={`bg-${skill.color} w-[${skill.progress}] h-2 rounded-full`}
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div className="flex  flex-col items-center gap-2">
-              <FaCss3Alt className="text-blue-500" />
-              Css
-              <div className="w-[60%] bg-gray-500 h-2 rounded-full">
-                <div className="bg-blue-400 w-[80%] h-2 rounded-full"></div>
-              </div>
-            </div>
-            <div className="flex  flex-col items-center gap-2">
-              <SiJavascript className="text-yellow-400" />
-              Javascript
-              <div className="w-[60%] bg-gray-500 h-2 rounded-full">
-                <div className="bg-yellow-300 w-[70%] h-2 rounded-full"></div>
-              </div>
-            </div>
-            <div className="flex  flex-col items-center gap-2">
-              <SiTypescript className="text-blue-400" />
-              Typescipt
-              <div className="w-[60%] bg-gray-500 h-2 rounded-full">
-                <div className="bg-cyan-400 w-[30%] h-2 rounded-full"></div>
-              </div>
-            </div>
-            <div className="flex  flex-col items-center gap-2">
-              <FaReact className="text-cyan-400" />
-              React
-              <div className="w-[60%] bg-gray-500 h-2 rounded-full">
-                <div className="bg-blue-300 w-[40%] h-2 rounded-full"></div>
-              </div>
-            </div>
-            <div className="flex  flex-col items-center gap-2">
-              <SiTailwindcss className="text-orange-500" />
-              Taiwind Css
-              <div className="w-[60%] bg-gray-500 h-2 rounded-full gap-8">
-                <div className="bg-sky-400 w-[30%] h-2 rounded-full"></div>
-              </div>
-            </div>
+            ))}
           </section>
         )}
         {activeCategory === "Tools" && (
-          <div className="gap-8 p-8 rounded-1g shadow-xl text-4xl flex lg:flex-row flex-col cursor-pointer">
-            <div className="flex  flex-col items-center gap-2">
+          <div className="gap-8 p-8 rounded-1g shadow-xl text-4xl flex lg:flex-row flex-col cursor-pointer ">
+            <div className="flex  flex-col items-center gap-2 hover:scale-105 transition-transform duration-300 ">
               <FaGithub className="text-white with shadow-[0_0_15px_#60a5fa]" />
               Github
             </div>
-            <div className="flex  flex-col items-center gap-2">
+            <div className="flex  flex-col items-center gap-2 hover:scale-105 transition-transform duration-300">
               <VscVscode className="text-indigo-400" />
               Vscode
             </div>
-            <div className="flex  flex-col items-center gap-2">
-              <SiVercel className="text-gray-400 hover:text-gray-300 transition duration-300" />
+            <div className="flex  flex-col items-center gap-2 transition-transform duration-300 ">
+              <SiVercel className="text-gray-400 hover:text-gray-300 transition duration-300 " />
               Vercel
             </div>
           </div>
