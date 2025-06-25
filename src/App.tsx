@@ -7,7 +7,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
-import ContactInfo from "./pages/ContactInfo";
+import ContactInfo from "./pages/Contactinfo";
 
 function App() {
   //const [count, setCount] = useState(0)
