@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import { FaCss3Alt, FaGithub, FaHtml5, FaReact } from "react-icons/fa";
 import {
   SiJavascript,
