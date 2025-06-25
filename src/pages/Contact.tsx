@@ -16,7 +16,7 @@ const Contact = () => {
           Contact me
         </h1>
         <div className=" border-4 border-yellow-400 p-10">
-          <div className="flex">
+          <div className="flex flex-col lg:flex-row">
             <div className="gap-6 py-5 px-10 flex flex-col">
               <label className="text-white">Full Name:</label>
               <input

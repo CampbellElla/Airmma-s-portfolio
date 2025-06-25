@@ -9,49 +9,51 @@ import {
 import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
-  const skills: {
-    icon: ReactNode;
-    title: string;
-    progress: string;
-    color: string;
-  }[] = [
+  const skills = [
     {
       icon: <FaHtml5 />,
       title: "HTML",
       progress: "70%",
-      color: "orange-500",
+      color: "text-orange-500",
+      bgColor: "bg-orange-500",
     },
     {
       icon: <FaCss3Alt />,
       title: "CSS",
       progress: "60%",
-      color: "blue-400",
+      color: "text-blue-400",
+      bgColor: "bg-blue-400",
     },
     {
       icon: <SiJavascript />,
       title: "JavaScript",
       progress: "70%",
-      color: "yellow-600",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-600",
     },
     {
       icon: <SiTypescript />,
       title: "TypeScript",
       progress: "30%",
-      color: "blue-400",
+      color: "text-blue-400",
+      bgColor: "bg-blue-400",
     },
     {
       icon: <FaReact />,
       title: "React",
       progress: "40%",
-      color: "cyan-400",
+      color: "text-cyan-400",
+      bgColor: "bg-cyan-400",
     },
     {
       icon: <SiTailwindcss />,
       title: "Tailwind",
       progress: "30%",
-      color: "orange-500",
+      color: "text-orange-500",
+      bgColor: "bg-orange-500",
     },
   ];
+
   const [activeCategory, setActiveCategory] = useState("Frontend");
   return (
     <div className="min-h-screen bg-black text-white px-10 py-20">
@@ -88,13 +90,14 @@ const Skills = () => {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="flex  flex-col items-center gap-2 hover:scale-105 transition-transform duration-300"
+                className="flex flex-col items-center gap-2 hover:scale-105 transition-transform duration-300"
               >
-                <div className={`text-${skill.color}`}>{skill.icon}</div>
+                <div className={skill.color}>{skill.icon}</div>
                 {skill.title}
-                <div className="w-[100%] bg-gray-500 h-2 rounded-full gap-8 overflow-hidden">
+                <div className="w-full bg-gray-500 h-2 rounded-full gap-8 overflow-hidden">
                   <div
-                    className={`bg-${skill.color} w-[${skill.progress}] h-2 rounded-full`}
+                    className={`${skill.bgColor} h-2 rounded-full`}
+                    style={{ width: skill.progress }}
                   ></div>
                 </div>
               </div>
