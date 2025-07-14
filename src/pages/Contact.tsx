@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div className="w-full relative min-h-screen pt-40 relative mx-auto flex lg:flex-row flex-col justify-between items-center p-6 lg:p-10 bg-gradient-to-r from-black via-gray-900 to-gray-600 overflow-hidden">
+    <div className="w-full relative lg:pt-40 pt-0 mx-auto flex lg:flex-row flex-col justify-between lg:overflow-hidden items-center p-6 lg:p-10 bg-gradient-to-r from-black via-gray-900 to-gray-600 gap-10">
       <div className="w-full lg:w-[45%] flex justify-center items-center mb-10 lg:mb-0">
         <img
           src="Ella.jpg"
           alt=""
-          className="lg:w-[640px] lg:h-[480px] hidden md:block object-cover rounded"
+          className="lg:w-[640px] lg:h-[480px] hidden lg:block object-cover rounded"
         />
       </div>
-      <div className="absolute -bottom-3 -right-3 w-full lg:w-[55%] flex flex-col items-center lg:items-start">
-        <h1 className="mt-10 text-yellow-500 lg:text-6xl text-4xl lg:text-left text-center mb-6">
+      <div className="lg:absolute lg:-bottom-3 lg:-right-3 w-full lg:w-[55%] flex flex-col items-center lg:items-start">
+        <h1 className="lg:mt-10 mt-0 text-yellow-500 lg:text-6xl text-4xl lg:text-left text-center mb-6">
           Contact me
         </h1>
         <div className="w-full border-4 border-yellow-400 p-6 lg:p-10 bg-black/30 shadow-1g">

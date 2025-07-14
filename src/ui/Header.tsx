@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { FaChalkboardUser } from "react-icons/fa6";
-import { HiAcademicCap } from "react-icons/hi";
 import { IoClose, IoHome } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
@@ -12,14 +11,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [nav, setNav] = useState(false);
   return (
-    <div className="relative bg-gradient-to-r from-black via-gray-900 to-black text-white lg:px-[6%] py-5 px-2% !z-50">
+    <div className="relative bg-gradient-to-r from-black via-gray-900 to-black text-white lg:px-[6%] lg:py-5 py-2 px-2% !z-50">
       <nav className="flex items-center justify-between lg:w-full">
         <Link to="/">
-          <img
-            src="logo.png"
-            alt="logo"
-            className="w-10 invert absolute top-5"
-          />
+          <img src="logo.png" alt="logo" className="w-10 invert" />
         </Link>
 
         <div className="absolute top-5 right-5 lg:hidden  flex items-center justify-center">
@@ -62,14 +57,14 @@ const Header = () => {
             <FaChalkboardUser />
             Skills
           </Link>
-          <Link
+          {/* <Link
             to="/experience"
             className="flex items-center gap-1"
             onClick={() => setNav(false)}
           >
             <HiAcademicCap />
             Experience
-          </Link>
+          </Link> */}
           <Link
             to="/contact"
             className="flex items-center gap-1"
