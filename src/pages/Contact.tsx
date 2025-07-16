@@ -49,7 +49,7 @@ const Contact = () => {
           onSubmit={sendEmail}
           className="w-full border-4 border-yellow-400 p-6 lg:p-10 bg-black/30 shadow-1g"
         >
-          <div className="flex flex-col lg:flex-row gap-10">
+          <div className="flex flex-col-reverse lg:flex-row gap-10">
             <div className="flex flex-col gap-6 w-full lg:w-1/2">
               <label className="text-white">Full Name:</label>
               <input
