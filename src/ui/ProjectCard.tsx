@@ -1,6 +1,16 @@
 //import React from "react";
-
-function ProjectCard({ image, url, title, tools }) {
+interface ProjectCardProps {
+  image: string;
+  url: string;
+  title: string;
+  tools: string;
+}
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  image,
+  url,
+  title,
+  tools,
+}) => {
   return (
     <div className="bg-gray-900 text-white rounded-xl overflow-hidden shadow-lg group relative transition-transform transform hover:scale-105 w-full max-w-md">
       <div className="relative">
@@ -22,6 +32,6 @@ function ProjectCard({ image, url, title, tools }) {
       </div>
     </div>
   );
-}
+};
 
 export default ProjectCard;
