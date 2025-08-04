@@ -1,3 +1,5 @@
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 //import React from "react";
 interface ProjectCardProps {
   image: string;
@@ -20,9 +22,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-400 text-black font-semibold px-4 py-2 rounded-full text-sm hover:bg-yellow-600"
+            className="bg-yellow-400 text-black font-semibold px-4 py-2 rounded-full text-sm hover:bg-yellow-600 flex gap-4 items-center"
           >
-            VISIT WEBSITE
+            VISIT WEBSITE <FaExternalLinkAlt className="h-6" />
           </a>
         </div>
       </div>

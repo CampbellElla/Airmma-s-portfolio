@@ -23,7 +23,7 @@ const About = () => {
           to every challenge.
         </p>
         <p className="text-1g text-xl mb-4">
-          I'm a girl on a journey to explore, grow, and create fun and
+          I'm a Lady on a journey to explore, grow, and create fun and
           meaningful projects with a touch of good vibes. Whether it's
           designing, coding, or brainstorming, I'm all in.🚀
         </p>
@@ -33,8 +33,9 @@ const About = () => {
 
         <p className="text-xl text-gray-300 mt-4">
           I love to code, vibe to music, and have meaningful conversations, and
-          My go-to framework? Definitely React....(its logic and power I enjoy
-          building things that look good and feel good to use.)😌💻
+          My go-to framework? Definitely React....(its on logic and power I
+          enjoy developing ideas that are aesthetically thrilling and enjoyale
+          to use.)😌💻
         </p>
       </motion.div>
 
