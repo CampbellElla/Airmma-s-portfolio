@@ -50,6 +50,7 @@ const Contact = () => {
           className="w-full border-4 border-yellow-400 p-6 lg:p-10 bg-black/30 shadow-1g"
         >
           <div className="flex flex-col-reverse lg:flex-row gap-10">
+            <div></div>
             <div className="flex flex-col gap-6 w-full lg:w-1/2">
               <label className="text-white">Full Name:</label>
               <input
@@ -75,24 +76,26 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="flex flex-col gap-6 w-full lg:w-1/2">
-              <div>
-                <h2 className="text-2xl text-yellow-600">Email</h2>
-                <Link
-                  to="mailto:campbellemmanuella17@gmail.com"
-                  className="text-white hover:text-yellow-600"
-                >
-                  campbellemmanuella17@gmail.com
-                </Link>
-              </div>
-              <div>
-                <h2 className="text-2xl text-yellow-600">Based in</h2>
-                <p className="text-white">Nigeria</p>
-              </div>
-              <div>
-                <h2 className="text-2xl text-yellow-600 hover:text-white">
-                  Phone
-                </h2>
-                <p className="text-white">+2347051604330</p>
+              <div className="bg-black/40 border border-yellow-500 rounded-xl p-6 shadow-lg w-full">
+                <div>
+                  <h2 className="text-2xl text-yellow-600">Email</h2>
+                  <Link
+                    to="mailto:campbellemmanuella17@gmail.com"
+                    className="text-white hover:text-yellow-600"
+                  >
+                    campbellemmanuella17@gmail.com
+                  </Link>
+                </div>
+                <div>
+                  <h2 className="text-2xl text-yellow-600">Based in</h2>
+                  <p className="text-white">Nigeria</p>
+                </div>
+                <div>
+                  <h2 className="text-2xl text-yellow-600 hover:text-white">
+                    Phone
+                  </h2>
+                  <p className="text-white">+2347051604330</p>
+                </div>
               </div>
             </div>
           </div>
@@ -100,13 +103,25 @@ const Contact = () => {
             <button className="text-white bg-yellow-600 hover:bg-yellow-400 px-6 py-2 rounded-full mt-4">
               Submit
             </button>
-            <Link to="#" target="blank" rel="noopener noreferrer">
+            <Link
+              to="https://instagram.com/campbell_.ella21"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="mt-2 hover:text-gray-400 text-pink-600 cursor-pointer" />
             </Link>
-            <Link to="#" target="blank" rel="noopener noreferrer">
+            <Link
+              to="https://twitter.com/CampbellElla01"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <BsTwitterX className="mt-2 hover:text-gray-400 text-black  cursor-pointer" />
             </Link>
-            <Link to="#" target="blank" rel="noopener noreferrer">
+            <Link
+              to="https://facebook.com/Emmanuella Campbell"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF className="mt-2 hover:text-gray-400 text-blue-500 cursor-pointer" />
             </Link>
             <Link

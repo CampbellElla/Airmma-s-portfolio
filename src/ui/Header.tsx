@@ -2,11 +2,14 @@
 import { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { FaChalkboardUser } from "react-icons/fa6";
+import { HiAcademicCap } from "react-icons/hi";
+// import { HiAcademicCap } from "react-icons/hi";
 import { IoClose, IoHome } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiBlackmagicdesign } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -57,14 +60,15 @@ const Header = () => {
             <FaChalkboardUser />
             Skills
           </Link>
-          {/* <Link
-            to="/experience"
+          <HashLink
+            smooth
+            to="/skills#experience"
             className="flex items-center gap-1"
             onClick={() => setNav(false)}
           >
             <HiAcademicCap />
             Experience
-          </Link> */}
+          </HashLink>
           <Link
             to="/contact"
             className="flex items-center gap-1"

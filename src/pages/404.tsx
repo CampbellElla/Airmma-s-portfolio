@@ -1,7 +1,7 @@
 //import React from 'react'
 
 const errorPage = () => {
-  return <div>404</div>;
+  return <div></div>;
 };
 
 export default errorPage;

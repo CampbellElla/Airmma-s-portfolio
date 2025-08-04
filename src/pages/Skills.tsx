@@ -122,8 +122,10 @@ const Skills = () => {
           </div>
         )}
       </div>
-      <Experience />
-      <p className="text-center mt-12 italic text-purple-600">
+      <div id="experience">
+        <Experience />
+      </div>
+      <p className="text-center mt-12 italic text-yellow-400">
         Still Learning, always building
       </p>
     </div>
