@@ -49,12 +49,12 @@ const Experience = () => {
           return (
             <div
               key={index}
-              className="relative mb-12 flex items-center w-full"
+              className="relative mb-12 flex flex-col md:flex-row items-center w-full"
             >
               {/* card */}
               <div
-                className={`w-1/2 px-4 ${
-                  isLeft ? "order-1 text-left" : "order-2 text-right"
+                className={`w-full md:w-1/2 px-4 text-center ${
+                  isLeft ? "md:order-1 text-left" : "md:order-2 md:text-right"
                 }`}
               >
                 <motion.div
@@ -71,12 +71,16 @@ const Experience = () => {
 
               {/* dot */}
               <div
-                className="z-10 w-6 h-6 bg-black border-4 rounded-full border-white absolute left-1/2 transform -translate-x-1/2"
+                className="z-10 w-4 h-4 md:w-6 md:h-6 bg-black border-4 rounded-full border-white absolute left-1/2 transform -translate-x-1/2"
                 style={{ borderColor: item.borderColor }}
               />
 
               {/* empty spacing for layout */}
-              <div className={`w-1/2 ${isLeft ? "order-2" : "order-1"}`} />
+              <div
+                className={`hidden md:block w-1/2 ${
+                  isLeft ? "order-2" : "order-1"
+                }`}
+              />
             </div>
           );
         })}

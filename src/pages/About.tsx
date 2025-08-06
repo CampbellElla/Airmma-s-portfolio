@@ -33,7 +33,7 @@ const About = () => {
 
         <p className="text-xl text-gray-300 mt-4">
           I love to code, vibe to music, and have meaningful conversations, and
-          My go-to framework? Definitely React....(its on logic and power I
+          My go-to framework? Definitely React....(it's on logic and power I
           enjoy developing ideas that are aesthetically thrilling and enjoyale
           to use.)😌💻
         </p>
