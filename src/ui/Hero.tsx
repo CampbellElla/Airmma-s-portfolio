@@ -39,7 +39,7 @@ const Hero = () => {
             Know Me
           </Link>
           <a
-            href="https://www.linkedin.com/in/emmanuella-campbell-9199ba376?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            href="https://www.linkedin.com/in/emmanuella-campbell-9199ba376?"
             target="blank"
             rel="noopener noreferrer"
             className="bg-yellow-600 text-black px-6 py-3 rounded-full font-medium hover:opacity-80 transition duration-300"
