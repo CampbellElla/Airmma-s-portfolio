@@ -14,14 +14,14 @@ const Skills = () => {
     {
       icon: <FaHtml5 />,
       title: "HTML",
-      progress: "70%",
+      progress: "100%",
       color: "text-orange-500",
       bgColor: "bg-orange-500",
     },
     {
       icon: <FaCss3Alt />,
       title: "CSS",
-      progress: "60%",
+      progress: "100%",
       color: "text-blue-400",
       bgColor: "bg-blue-400",
     },
@@ -42,14 +42,14 @@ const Skills = () => {
     {
       icon: <FaReact />,
       title: "React",
-      progress: "40%",
+      progress: "90%",
       color: "text-cyan-400",
       bgColor: "bg-cyan-400",
     },
     {
       icon: <SiTailwindcss />,
       title: "Tailwind",
-      progress: "30%",
+      progress: "80%",
       color: "text-orange-500",
       bgColor: "bg-orange-500",
     },

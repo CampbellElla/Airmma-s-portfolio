@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="min-h-screen w-full flex lg:flex-row  flex-col-reverse items-center px-20 py-20 bg-gradient-to-r from-black via-gray-900 justify-between text-white gap-12">
+    <div className="min-h-screen w-full flex lg:flex-row  flex-col-reverse items-center px-20 py-20 bg-gradient-to-r from-black via-gray-800 justify-between text-white gap-12">
       <motion.div
         className="flex-1 max-w-xl"
         initial={{ opacity: 0, x: -30 }}
@@ -41,9 +41,9 @@ const About = () => {
 
       <div className="flex-1 flex justify-center items-center">
         <img
-          src="/Ella2.png"
+          src="/Ella3.jpg"
           alt="aboutimage"
-          className="lg:w-[800px] lg:h-auto w-[120px] h-[100px] object-cover rounded-full md:rounded-none shadow-1g border-2 border-yellow-600 animate-pulse hover:scale-105 transition:transform duration-700 ease-in-ease-out"
+          className="lg:w-[480px] lg:h-[480px] lg:scale-110 w-[280px] h-[280px] rounded-full object-cover shadow-1g ring-2 ring-yellow-600/20 animate-pulse hover:scale-105 transition:transform duration-700 ease-in-ease-out"
         />
       </div>
     </div>

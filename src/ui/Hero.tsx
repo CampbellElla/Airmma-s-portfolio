@@ -58,8 +58,8 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-        className="flex justify-center"
-        animate={{ y: [0, -20, 0] }}
+        className="flex justify-center lg:justify-center lg:mr-10 mt-10 lg:mt-0"
+        animate={{ y: [0, 10, 0] }}
         transition={{
           duration: 2,
           repeat: Infinity,
@@ -68,9 +68,9 @@ const Hero = () => {
         }}
       >
         <img
-          src="/Ella2.png"
+          src="/Ella3.jpg"
           alt="Profile"
-          className="lg:w-[1200px] w-[1800px] h-auto rounded-xl shadow-2xl object-cover"
+          className="lg:w-[500px] lg:h-[500px] lg:scale-110 w-[280px] h-[280px] rounded-full shadow-2xl object-cover ring-2 ring-yellow-600/20"
         />
       </motion.div>
     </div>

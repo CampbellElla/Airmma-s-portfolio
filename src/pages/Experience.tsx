@@ -53,8 +53,8 @@ const Experience = () => {
             >
               {/* card */}
               <div
-                className={`w-full md:w-1/2 px-4 text-center ${
-                  isLeft ? "md:order-1 text-left" : "md:order-2 md:text-right"
+                className={`w-full md:w-1/2 px-4 text-left ${
+                  isLeft ? "md:order-1 text-left" : "md:order-2 md:text-left"
                 }`}
               >
                 <motion.div
