@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       <div className="p-4">
         <h2 className="font-bold text-lg mb-2">{title}</h2>
-        <p className="text-sm text-yellow-500">Tools Used: {tools}</p>
+        <p className="text-sm text-yellow-500">Tech Stack: {tools}</p>
       </div>
     </div>
   );
