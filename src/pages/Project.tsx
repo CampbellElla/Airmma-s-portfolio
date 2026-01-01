@@ -10,21 +10,33 @@ const Project = () => {
     },
     {
       image: "/project 2.png",
-      url: "http://127.0.0.1:5500/about.html",
+      url: "https://business-website-brown.vercel.app/",
       title: "Business Website",
       tools: "HTML, CSS, JavaScript",
     },
     {
       image: "/project 3.png",
-      url: "http://127.0.0.1:5500/index.html",
-      title: "Another Web Page",
+      url: "https://u-host-business-website-gp9f.vercel.app/",
+      title: "First Web Page",
       tools: "HTML, JavaScript",
     },
     {
       image: "/project 4.png",
-      url: "http://127.0.0.1:5500/",
+      url: "https://construction-psi-five.vercel.app/",
       title: "Cat Website",
       tools: "HTML, CSS",
+    },
+    {
+      image: "/project 5.png",
+      url: "https://react-socials.vercel.app/",
+      title: "Social website",
+      tools: "Vite + React",
+    },
+    {
+      image: "/project 6.png",
+      url: "https://mindful-eating-qja5.vercel.app/",
+      title: "Nutritional website",
+      tools: "Vite + React",
     },
   ];
 

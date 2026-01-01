@@ -43,7 +43,7 @@ const About = () => {
         <img
           src="/Ella3.jpg"
           alt="aboutimage"
-          className="lg:w-[480px] lg:h-[480px] lg:scale-110 w-[280px] h-[280px] rounded-full object-cover shadow-1g ring-2 ring-yellow-600/20 animate-pulse hover:scale-105 transition:transform duration-700 ease-in-ease-out"
+          className="lg:w-[560px] lg:h-[520px] w-[280px] h-[280px] rounded-2xl object-cover shadow-1g ring-2 ring-yellow-600/20 animate-pulse hover:scale-105 transition:transform duration-700 ease-in-ease-out"
         />
       </div>
     </div>
