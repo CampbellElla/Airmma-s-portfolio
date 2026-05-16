@@ -11,6 +11,7 @@ type Certificate = {
   issuer: string;
   date: string;
   slug: string;
+  description: string;
 };
 
 /* ════════════════════════════════════════
@@ -66,8 +67,8 @@ function ShaplaIcon() {
 
 /* ════════════════════════════════════════
    Card
-════════════════════════════════════════ */
-function CertCard({ data, delay }: { data: Certificate; delay: number }) {
+═══════════════════════════════════════════ */
+function CertCard({ data, onOpen, delay }: { data: Certificate; onOpen: () => void; delay: number }) {
   return (
     <motion.div
        className="group relative rounded-2xl overflow-hidden cursor-pointer
@@ -78,7 +79,7 @@ function CertCard({ data, delay }: { data: Certificate; delay: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ delay, duration: 0.55 }}
-      onClick={() => {/* handled in parent wrapper */}}
+      onClick={onOpen}
       data-hover
     >
       {/* Certificate image */}
@@ -105,8 +106,12 @@ function CertCard({ data, delay }: { data: Certificate; delay: number }) {
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-[0.68rem] text-brand-muted">
-          <span>{data.issuer}</span>
+        <p className="text-brand-muted text-xs leading-relaxed line-clamp-2">
+          {data.description}
+        </p>
+
+        <div className="flex items-center justify-between text-[0.68rem] text-brand-muted pt-1 border-t border-brand-darkBorder">
+          <span className="font-medium text-brand-cream/60">{data.issuer}</span>
           <span className="flex items-center gap-1"><TimerIcon /> {data.date}</span>
         </div>
       </div>
@@ -163,12 +168,15 @@ function Lightbox({ data, onClose }: { data: Certificate; onClose: () => void })
               <ShaplaIcon />
               <h3 className="font-display font-bold text-brand-cream text-xl">{data.title}</h3>
             </div>
-            <p className="text-brand-muted text-sm">
-              Issuer: <span className="text-brand-cream/80 font-semibold">{data.issuer}</span>
-            </p>
-            <p className="text-brand-muted text-sm">
-              Earned: <span className="text-brand-goldLight font-semibold">{data.date}</span>
-            </p>
+            <p className="text-brand-muted text-sm leading-relaxed">{data.description}</p>
+            <div className="flex items-center gap-6 pt-2 border-t border-brand-darkBorder">
+              <p className="text-brand-muted text-sm">
+                Issuer: <span className="text-brand-cream/80 font-semibold">{data.issuer}</span>
+              </p>
+              <p className="text-brand-muted text-sm">
+                Earned: <span className="text-brand-goldLight font-semibold">{data.date}</span>
+              </p>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -178,49 +186,88 @@ function Lightbox({ data, onClose }: { data: Certificate; onClose: () => void })
 
 /* ════════════════════════════════════════
    Main export
-════════════════════════════════════════ */
+═══════════════════════════════════════════ */
 const CERTS: Certificate[] = [
   {
     image:  "/certificate1.png",
-    title:  "Professional Frontend Certificate",
-    issuer: "TechAcademy",
-    date:   "Oct 2024",
-    slug:   "frontend-pro",
+    title:  "Frontend Engineering Fundamentals",
+    issuer: "ALX Africa",
+    date:   "December 2024",
+    slug:   "frontend-fundamentals",
+    description:
+      "A rigorous 12-week program covering semantic HTML, modern CSS, vanilla JavaScript, and the fundamentals of building production-grade user interfaces from scratch.",
   },
   {
     image:  "/certificate2.png",
-    title:  "React Developer Certification",
-    issuer: "Meta",
-    date:   "Jun 2024",
-    slug:   "react-meta",
+    title:  "React Front-End Developer Nanodegree",
+    issuer: "Udacity",
+    date:   "March 2025",
+    slug:   "react-nanodegree",
+    description:
+      "Hands-on mastery of React hooks, state management, React Router, and component architecture. Built three capstone projects including a travel journal app and an e-commerce storefront.",
+  },
+  {
+    image:  "/certificate2.png",
+    title:  "TypeScript for React Developers",
+    issuer: "Frontend Masters",
+    date:   "January 2025",
+    slug:   "ts-react",
+    description:
+      "Deep dive into TypeScript's type system tailored specifically for React — interfaces, generics, utility types, discriminated unions, and building type-safe component libraries.",
   },
   {
     image:  "/certificate1.png",
-    title:  "Tailwind CSS Mastery",
+    title:  "Modern CSS: Flexbox, Grid & Animations",
+    issuer: "CSS-Tricks Academy",
+    date:   "June 2024",
+    slug:   "modern-css",
+    description:
+      "Explored the full modern CSS toolbox — Flexbox alignment patterns, CSS Grid layouts, keyframe and transition animations, custom properties, and container queries.",
+  },
+  {
+    image:  "/certificate1.png",
+    title:  "Git & GitHub for Professional Developers",
+    issuer: "GitHub Skills",
+    date:   "August 2024",
+    slug:   "git-professional",
+    description:
+      "Branching strategies, rebase vs merge workflows, pull-request etiquette, GitHub Actions CI/CD, and collaborative open-source workflows used by professional engineering teams.",
+  },
+  {
+    image:  "/certificate2.png",
+    title:  "Tailwind CSS: From Zero to Production",
     issuer: "Tailwind Labs",
-    date:   "Sep 2024",
-    slug:   "tailwind-mastery",
+    date:   "November 2024",
+    slug:   "tailwind-production",
+    description:
+      "Utility-first CSS architecture at scale — design systems, plugin development, dark mode patterns, responsive variants, and integrating Tailwind with React and Next.js projects.",
   },
   {
     image:  "/certificate2.png",
-    title:  "Advanced JavaScript Patterns",
-    issuer: "Udemy",
-    date:   "Jan 2025",
+    title:  "JavaScript: The Advanced Concepts",
+    issuer: "Andrei Neagoie / Zero To Mastery",
+    date:   "October 2024",
     slug:   "js-advanced",
+    description:
+      "Deep conceptual knowledge of the call stack, event loop, prototypal inheritance, closures, async patterns, and master class in JavaScript's most misunderstood design decisions.",
   },
   {
     image:  "/certificate1.png",
-    title:  "TypeScript Fundamentals",
-    issuer: "Microsoft",
-    date:   "Dec 2024",
-    slug:   "ts-ms",
+    title:  "Women in Tech Leadership Certificate",
+    issuer: "Women Tech Network",
+    date:   "February 2025",
+    slug:   "women-tech-lead",
+    description:
+      "Celebrating and amplifying women in technology — covered inclusive leadership, technical communication, community building, and mentorship best practices in modern engineering cultures.",
   },
   {
     image:  "/certificate2.png",
-    title:  "Git & GitHub Workflow",
-    issuer: "GitHub",
-    date:   "Aug 2024",
-    slug:   "git-github",
+    title:  "Responsive Web Design Principles",
+    issuer: "freeCodeCamp",
+    date:   "May 2024",
+    slug:   "rwd-freecodecamp",
+    description:
+      "Mobile-first media queries, fluid typography, responsive images, accessibility-first patterns, and building UIs that feel native across every screen size — phone, tablet, and desktop.",
   },
 ];
 
@@ -254,7 +301,7 @@ export default function Certificates() {
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {CERTS.map((c, i) => (
-            <CertCard key={c.slug} data={c} delay={i * 0.08} />
+            <CertCard key={c.slug} data={c} delay={i * 0.08} onOpen={() => setActive(c)} />
           ))}
         </div>
       </div>
