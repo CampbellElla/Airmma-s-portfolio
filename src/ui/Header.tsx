@@ -12,16 +12,18 @@ const IconSkills = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="n
 const IconCap    = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10L12 3 2 10l10 7 10-7z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>;
 const IconMsg    = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>;
 const IconCode   = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>;
+const IconCert   = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m9 12 2 2 4-4"/><path d="M7 3h10"/><path d="M8 3v3"/><path d="M16 3v3"/></svg>;
 const IconMenu   = () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>;
 const IconClose  = () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
 
 const NAV_LINKS = [
-  { to: "/",              label: "Home",     hash: false, Icon: IconHome   },
-  { to: "/about#about",   label: "About",    hash: false, Icon: IconUser   },
-  { to: "/skills#skills", label: "Skills",   hash: false, Icon: IconSkills },
-  { to: "/experience",    label: "Experience", hash: false, Icon: IconCap    },
-  { to: "/contact#contact",label: "Contact", hash: false, Icon: IconMsg    },
-  { to: "/projects#projects", label: "Projects", hash: false, Icon: IconCode   },
+  { to: "/",              label: "Home",         hash: false, Icon: IconHome     },
+  { to: "/about#about",   label: "About",        hash: false, Icon: IconUser     },
+  { to: "/skills#skills", label: "Skills",       hash: false, Icon: IconSkills   },
+  { to: "/experience",    label: "Experience",   hash: false, Icon: IconCap      },
+  { to: "/certificates",  label: "Certificates", hash: false, Icon: IconCert     },
+  { to: "/projects#projects", label: "Projects", hash: false, Icon: IconCode     },
+  { to: "/contact#contact",label: "Contact",     hash: false, Icon: IconMsg      },
 ];
 
 export default function Header() {
