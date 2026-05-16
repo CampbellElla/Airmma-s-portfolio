@@ -1,0 +1,40 @@
+.ring {
+  position: fixed;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(212, 114, 154, 0.55);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition:
+    width  0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    height 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.35s ease,
+    background-color 0.35s ease;
+  mix-blend-mode: difference;
+}
+.ring.hovering {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(229, 192, 110, 0.85);
+  background-color: rgba(229, 192, 110, 0.06);
+}
+
+.dot {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d4729a;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+}
+
+@media (pointer: coarse) {
+  .ring,
+  .dot {
+    display: none;
+  }
+}
