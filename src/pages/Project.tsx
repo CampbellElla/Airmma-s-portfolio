@@ -15,42 +15,56 @@ const PROJECTS: ProjectData[] = [
     url:   "https://react-socials.vercel.app/",
     title: "Social Website",
     tools: "React, Tailwind CSS, JavaScript",
-    span: "col-span-full sm:col-span-2 row-span-2 row-span-2-lg",
+    /* Row 1 — full-width featured card */
+    span: "col-span-full",
   },
   {
     image: "/project 2.png",
     url:   "https://business-website-brown.vercel.app/",
     title: "Business Website",
     tools: "HTML, CSS, JavaScript",
-    span: "row-span-1 sm:row-span-2",
+    /* Row 2 top-left — two-row tall sidebar */
+    span: "lg:row-span-2 lg:col-start-1",
   },
   {
     image: "/project 3.png",
     url:   "https://u-host-business-website-gp9f.vercel.app/",
     title: "First Web Page",
     tools: "HTML, JavaScript",
-    span: "",
-  },
-  {
-    image: "/project 1.png",
-    url:   "http://localhost:5174/",
-    title: "A Form",
-    tools: "React, Tailwind CSS, Vite",
-    span: "",
+    /* Row 2 right — fills the right gap under Row 1 */
+    span: "lg:row-start-1 lg:col-span-2 row-span-1",
   },
   {
     image: "/project 4.png",
     url:   "https://construction-psi-five.vercel.app/",
     title: "Cat Website",
     tools: "HTML, CSS",
-    span: "row-span-1",
+    /* Row 3 — paired with A Form on the row below */
+    span: "col-span-1",
+  },
+  {
+    image: "/project 1.png",
+    url:   "http://localhost:5174/",
+    title: "A Form",
+    tools: "React, Tailwind CSS, Vite",
+    /* Row 4 col-1 — anchors the bottom clamp with Cat & Food */
+    span: "col-span-1",
+  },
+  {
+    image: "/project 7.png",
+    url:   "https://food-website-with-dark-lavender-and-gold",
+    title: "Food Website",
+    tools: "React, Tailwind CSS, Vite",
+    /* Row 3-4 col-2 — medium two-row card spanning the right column */
+    span: "lg:row-span-2 lg:col-start-2",
   },
   {
     image: "/project 6.png",
     url:   "https://mindful-eating-qja5.vercel.app/",
     title: "Nutritional Website",
     tools: "React, Tailwind CSS, Vite",
-    span: "col-span-full sm:col-span-2",
+    /* Row 5 — full-width anchor closing the grid */
+    span: "col-span-full row-span-1",
   },
 ];
 
@@ -67,8 +81,10 @@ export default function Project() {
         {/* ── Header ── */}
         <motion.div
           className="mb-14"
-          initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
         >
           <p className="text-xs uppercase tracking-[0.25em] text-brand-roseLight font-semibold mb-2">
             Portfolio
