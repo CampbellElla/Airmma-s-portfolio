@@ -20,7 +20,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen py-28 px-6 md:px-10
+      className="relative min-h-screen py-20 px-4 sm:py-24 sm:px-6 md:py-28 md:px-10
                  bg-gradient-to-b from-brand-dark via-brand-darkAlt to-brand-dark
                  overflow-hidden"
     >
@@ -56,10 +56,10 @@ export default function About() {
         </motion.div>
 
         {/* ─── Content grid ─── */}
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* ── Left column — photo + stats ── */}
           <motion.div
-            className="lg:col-span-2 flex flex-col items-center gap-10"
+            className="lg:col-span-2 flex flex-col items-center gap-8 sm:gap-10"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -75,25 +75,25 @@ export default function About() {
               <img
                 src="/Ella3.jpg"
                 alt="Emmanuella Campbell"
-                className="relative w-[280px] h-[340px] lg:w-[320px] lg:h-[400px]
+                className="relative w-64 h-80 sm:w-72 sm:h-90 lg:w-[320px] lg:h-[400px]
                            object-cover rounded-[1.5rem] shadow-glow-rose
                            ring-2 ring-brand-rose/15"
               />
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-3 w-full">
+            <div className="grid grid-cols-2 gap-2.5 w-full">
               {STATS.map(({ value, label }) => (
                 <motion.div
                   key={label}
-                  className="glass rounded-2xl p-4 text-center"
+                  className="glass rounded-2xl p-3 sm:p-4 text-center"
                   whileHover={{ scale: 1.04, y: -2 }}
                   transition={{ type: "spring", damping: 18 }}
                 >
-                  <p className="font-display font-black text-2xl text-brand-roseLight">
+                  <p className="font-display font-black text-lg sm:text-2xl text-brand-roseLight">
                     {value}
                   </p>
-                  <p className="text-[0.72rem] uppercase tracking-wider text-brand-muted mt-1">
+                  <p className="text-[0.65rem] sm:text-[0.72rem] uppercase tracking-wider text-brand-muted mt-1">
                     {label}
                   </p>
                 </motion.div>
@@ -110,8 +110,8 @@ export default function About() {
             transition={{ duration: 0.75, delay: 0.15 }}
           >
             {/* Hero card */}
-            <div className="glass rounded-3xl p-7 sm:p-9 shadow-glow-sm">
-              <p className="text-brand-cream/70 leading-relaxed text-[0.93rem] sm:text-base">
+            <div className="glass rounded-3xl p-5 sm:p-7 shadow-glow-sm">
+              <p className="text-brand-cream/70 leading-relaxed text-sm sm:text-[0.93rem] lg:text-base">
                 Hey! I'm{" "}
                 <span className="text-brand-roseLight font-bold">
                   Emmanuella
@@ -139,13 +139,13 @@ export default function About() {
               </div>
             </div>
 
-            {/* Two lower cards */}
-            <div className="grid sm:grid-cols-2 gap-5">
+{/* Two lower cards */}
+            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-5">
               <div
-                className="glass rounded-2xl p-6 shadow-glow-sm hover:shadow-glow-md
-                              transition-shadow duration-400"
+                className="glass rounded-2xl p-4 sm:p-5 shadow-glow-sm hover:shadow-glow-md
+                                transition-shadow duration-400"
               >
-                <p className="text-brand-cream/70 leading-relaxed text-sm">
+                <p className="text-brand-cream/70 leading-relaxed text-xs sm:text-sm">
                   I'm a{" "}
                   <span className="text-brand-roseLight font-bold">
                     React lover
@@ -156,10 +156,10 @@ export default function About() {
                 </p>
               </div>
               <div
-                className="glass rounded-2xl p-6 shadow-glow-sm hover:shadow-glow-md
-                              transition-shadow duration-400"
+                className="glass rounded-2xl p-4 sm:p-5 shadow-glow-sm hover:shadow-glow-md
+                                transition-shadow duration-400"
               >
-                <p className="text-brand-cream/70 leading-relaxed text-sm">
+                <p className="text-brand-cream/70 leading-relaxed text-xs sm:text-sm">
                   I enjoy music and creativity as much as I enjoy clean
                   architecture. My quote:{" "}
                   <span className="font-script italic text-brand-gold">
