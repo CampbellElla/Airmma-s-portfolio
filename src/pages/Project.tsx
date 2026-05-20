@@ -10,44 +10,44 @@ export interface ProjectData {
 
 const PROJECTS: ProjectData[] = [
   {
+    image: "/project 3.png",
+    url: "https://u-host-business-website-gp9f.vercel.app/",
+    title: "First Web Page",
+    tools: "HTML, JavaScript",
+  },
+  {
     image: "/project 5.png",
-    url:   "https://react-socials.vercel.app/",
+    url: "https://react-socials.vercel.app/",
     title: "Social Website",
     tools: "React, Tailwind CSS, JavaScript",
   },
   {
     image: "/project 2.png",
-    url:   "https://business-website-brown.vercel.app/",
+    url: "https://business-website-brown.vercel.app/",
     title: "Business Website",
     tools: "HTML, CSS, JavaScript",
   },
   {
-    image: "/project 3.png",
-    url:   "https://u-host-business-website-gp9f.vercel.app/",
-    title: "First Web Page",
-    tools: "HTML, JavaScript",
-  },
-  {
     image: "/project 1.png",
-    url:   "http://localhost:5174/",
+    url: "http://localhost:5174/",
     title: "A Form",
     tools: "React, Tailwind CSS, Vite",
   },
   {
     image: "/project 4.png",
-    url:   "https://construction-psi-five.vercel.app/",
+    url: "https://construction-psi-five.vercel.app/",
     title: "Cat Website",
     tools: "HTML, CSS",
   },
   {
     image: "/project 7.png",
-    url:   "https://truemind-project.vercel.app/",
+    url: "https://truemind-project.vercel.app/",
     title: "Food Website",
     tools: "React, Tailwind CSS, Vite",
   },
   {
     image: "/project 6.png",
-    url:   "https://mindful-eating-qja5.vercel.app/",
+    url: "https://mindful-eating-qja5.vercel.app/",
     title: "Nutritional Website",
     tools: "React, Tailwind CSS, Vite",
   },
